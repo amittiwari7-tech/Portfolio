@@ -762,6 +762,15 @@ nav ul li:hover::before {
         padding: 0;
     }
 
+    .intro .left{
+        padding: 0 10px;
+    }
+
+     .intro .right{
+        padding: 40px 10px;
+    }
+
+
     .intro .left h1 {
     font-size: 30px;
     width: 100%;
