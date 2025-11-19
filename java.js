@@ -55,7 +55,7 @@ var swiper = new Swiper(".mySwiper", {
 
 //typed js
 var typed = new Typed('#element', {
-    strings: ['Appscript Developer', 'Appsheet Developer', 'Web Developer', 'Automation Expert','Google Workspace'],
+    strings: ['Appscript Developer', 'Appsheet Developer', 'Web Developer', 'Automation Expert','Google Workspace`'],
     typeSpeed: 50,
     loop: true,
     showCursor: false
