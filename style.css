@@ -84,6 +84,7 @@ nav ul li:hover::before {
     width: 0;
     transition: all 0.5s ease;
     position: absolute;
+    z-index: 999;
 }
 
 .navContainer ul li {
@@ -92,6 +93,11 @@ nav ul li:hover::before {
     padding: 10px;
     color: var(--font-color--);
     transition: all 0.5s ease-in;
+}
+
+.navContainer ul li a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .ri-close-circle-fill {
@@ -253,6 +259,7 @@ nav ul li:hover::before {
 .workexp {
     padding: 12vh 15vw;
     width: 100%;
+    height: auto;
     background-color: #fff;
 }
 
@@ -367,7 +374,8 @@ nav ul li:hover::before {
 
 .Aboutus {
     width: 100%;
-    height: 60vh;
+    min-height: 60vh;
+    max-height:fit-content;
     margin-top: 5vh;
     padding: 15px 150px;
     /* background-color: rgba(0, 0, 0, 0.1); */
@@ -789,8 +797,43 @@ nav ul li:hover::before {
     }
 
     .aboutusright ul li{
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
+
+     .experience::after {
+        content: none;     
+        display: none; 
+    }
+
+    .workexp{
+          padding: 10px 0;
+     }
+
+     .workexp h2{
+        
+        font-size: 5vw;
+     }
+
+    .experience{
+
+        padding: 0;
+    }
+
+.exp:nth-child(odd) {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exp:nth-child(even) {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exp{
+    width: 400px;
+}
 
     .contact-container{
           grid-template-columns: 1fr;
