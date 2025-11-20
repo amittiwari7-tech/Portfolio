@@ -17,10 +17,12 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
 main {
+    max-width: 100vw;
     width: 100%;
     min-height: 100vh;
     background: var(--mainColor--);
@@ -95,7 +97,7 @@ nav ul li:hover::before {
     transition: all 0.5s ease-in;
 }
 
-.navContainer ul li a{
+.navContainer ul li a {
     text-decoration: none;
     color: #fff;
 }
@@ -210,33 +212,33 @@ nav ul li:hover::before {
     padding: 0 5vw;
     display: flex;
     justify-content: center;
-   padding-top: 10vh;
+    padding-top: 10vh;
 }
 
 .frame {
     /* Make width and height equal for a circle */
-    width: 300px; 
+    width: 300px;
     height: 300px;
-    padding: 20px; 
-    background:var(--mainColor--); 
-    
+    padding: 20px;
+    background: var(--mainColor--);
+
     /* Key change: 50% border-radius makes it circular */
-    border-radius: 50%; 
-    
-    box-shadow: 
-        0 8px 15px rgba(0, 0, 0, 0.4), 
-        inset 0 0 5px rgba(255, 255, 255, 0.1); 
-    border: 1px solid #c0c0c0; 
+    border-radius: 50%;
+
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.4),
+        inset 0 0 5px rgba(255, 255, 255, 0.1);
+    border: 1px solid #c0c0c0;
 }
 
 /* 2. The Dummy Photo Area - CIRCLE */
 .dummy-photo {
     width: 100%;
     height: 100%;
-    background-color: #ffffff; 
-    
+    background-color: #ffffff;
+
     /* Key change: Also 50% to maintain the circular shape inside */
-    border-radius: 50%; 
+    border-radius: 50%;
 
     display: flex;
     justify-content: center;
@@ -246,10 +248,10 @@ nav ul li:hover::before {
     font-size: 1.2em;
     font-style: italic;
     border: 1px solid #111111;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-.dummy-photo img{
+.dummy-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -354,7 +356,7 @@ nav ul li:hover::before {
     display: none;
 }
 
-.expinfo p{
+.expinfo p {
     padding: 5px;
 }
 
@@ -375,7 +377,7 @@ nav ul li:hover::before {
 .Aboutus {
     width: 100%;
     min-height: 60vh;
-    max-height:fit-content;
+    max-height: fit-content;
     margin-top: 5vh;
     padding: 15px 150px;
     /* background-color: rgba(0, 0, 0, 0.1); */
@@ -423,7 +425,7 @@ nav ul li:hover::before {
 
 .Aboutus ul {
     /* width: 100%; */
-   
+
     /* box-shadow: rgba(213, 213, 236, 0.6) 0px 7px 29px 0px; */
     list-style-position: inside;
 
@@ -725,14 +727,13 @@ nav ul li:hover::before {
     color: #fff;
 }
 
-/* make responsive in Mobile View */
 
-@media screen and (max-width:500px) {
- 
- main nav {
+@media screen and (max-width:576px) {
+
+    /* NAVBAR */
+    main nav {
         justify-content: space-between;
-        padding: 10px;
-
+        padding: 10px 15px;
     }
 
     main nav ul {
@@ -741,135 +742,152 @@ nav ul li:hover::before {
 
     .ri-menu-2-line {
         display: inline-block;
-        font-size: 6vw;
+        font-size: 7vw;
+    }
+
+    .navContainer {
+        width: 100%;
+        height: 100vh;
+        padding: 40px 20px;
+        background: rgba(0,0,0,0.9);
     }
 
     .navContainer ul li {
-        list-style: none;
         font-size: 6vw;
-        padding: 10px;
-        color: #fff;
+        padding: 15px 0;
     }
 
     .ri-close-circle-fill {
-
-        font-size: 6vw;
-
+        font-size: 10vw;
     }
 
+
+    /* HERO SECTION */
     .intro {
         flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .intro .left {
         padding: 0;
+        width: 100%;
     }
-
-    .intro .left{
-        padding: 0 10px;
-    }
-
-     .intro .right{
-        padding: 40px 10px;
-    }
-
 
     .intro .left h1 {
-    font-size: 30px;
-    width: 100%;
-    max-width: 400px;
-}
+        font-size: 7vw;
+        width: 100%;
+    }
+
+    .intro .left p {
+        font-size: 4vw;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .button-group {
+        margin-top: 20px;
+    }
 
 
-.intro .left p {
-    font-size: 18px;
-    width: 100%;
-    max-width: 400px;
-    text-align: left;
-    margin: 10px 0;
-    letter-spacing: 1px;
-}
+    /* RIGHT IMAGE FRAME */
+    .intro .right {
+        padding: 20px 0;
+    }
 
+    .frame {
+        width: 200px;
+        height: 200px;
+    }
+
+
+    /* ABOUT SECTION */
     .Aboutus {
-        padding: 5px;
-        width: 100vw;
+        padding: 10px 15px;
+        width: 100%;
     }
 
     .aboutusinfo {
         flex-direction: column;
-
+        gap: 20px;
     }
 
-   
-
-    .aboutusinfo img {
-        width: 40%;
-       display: block;
-       margin: auto;
+    .aboutusleft img {
+        width: 60%;
+        margin: auto;
+        display: block;
     }
 
-    .aboutusright ul li{
-        font-size: 3vw;
-    }
-
-     .experience::after {
-        content: none;     
-        display: none; 
-    }
-
-    .workexp{
-          padding: 10px 0;
-     }
-
-     .workexp h2{
-        
-        font-size: 5vw;
-     }
-
-    .experience{
-
-        padding: 0;
-    }
-
-    .experiencedetail{
-        padding: 5px;
-    }
-
-    .detail h5{
+    .Aboutus ul li {
         font-size: 4vw;
     }
 
-    .position h6{
-        font-size: 3vw;
+
+
+    /* WORK EXPERIENCE */
+    .experience::after {
+        display: none;
     }
 
-.exp:nth-child(odd) {
-    align-self: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.exp:nth-child(even) {
-    align-self: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.exp{
-    width: 400px;
-}
-
-    .contact-container{
-          grid-template-columns: 1fr;
+    .workexp {
+        padding: 20px 10px;
     }
 
+    .workexp h2 {
+        font-size: 6vw;
+    }
+
+    .experience {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .exp {
+        width: 100%;
+        max-width: 360px;
+        margin: auto;
+    }
+
+    .detail h5 {
+        font-size: 4vw;
+    }
+
+    .position h6 {
+        font-size: 3.5vw;
+    }
+
+
+    .exp:nth-child(odd),
+    .exp:nth-child(even) {
+        align-self: center;
+        margin: auto;
+    }
+
+
+
+    /* PROJECT SECTION */
     .swipercontainer {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 45px;
-}
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .swiper-slide h2 {
+        font-size: 4vw;
+    }
 
 
+    /* CONTACT SECTION */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 10px;
+    }
 
-    /* footer media query */
+    .contact-form {
+        padding: 20px;
+    }
+
+
+    /* FOOTER */
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
