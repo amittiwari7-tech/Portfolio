@@ -828,6 +828,18 @@ nav ul li:hover::before {
         padding: 0;
     }
 
+    .experiencedetail{
+        padding: 5px;
+    }
+
+    .detail h5{
+        font-size: 4vw;
+    }
+
+    .position h6{
+        font-size: 3vw;
+    }
+
 .exp:nth-child(odd) {
     align-self: center;
     margin-left: auto;

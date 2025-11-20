@@ -138,7 +138,7 @@ gsap.utils.toArray(".exp:nth-child(odd)").forEach((box) => {
         ease: "power3.out",
         scrollTrigger: {
             trigger: box,
-            start: "top 80%",   // jab element screen me enter ho
+            start: "top 55%",   // jab element screen me enter ho
             toggleActions: "play none none reverse"
         }
     });
@@ -153,7 +153,7 @@ gsap.utils.toArray(".exp:nth-child(even)").forEach((box) => {
         ease: "power3.out",
         scrollTrigger: {
             trigger: box,
-            start: "top 80%",
+            start: "top 70%",
             toggleActions: "play none none reverse"
         }
     });
@@ -180,7 +180,7 @@ gsap.from('.aboutusright ul li',{
     scrollTrigger:{
         scroller:'body',
         trigger:'.aboutusright',
-        start:"top 60%",
+        start:"top 70%",
         toggleActions:"play none none reverse"
     }
 })
@@ -192,8 +192,8 @@ gsap.from(".contact-left",{
     scrollTrigger:{
         scroller:"body",
         trigger:".contact-left",
-        start: "top 70%",
-        end: "top 80%",
+        start: "top 60%",
+        end: "top 70%",
         toggleActions : "play none none reverse"
 
     }
@@ -207,8 +207,8 @@ gsap.from(".contact-form",{
     scrollTrigger:{
         scroller:"body",
         trigger:".contact-left",
-        start: "top 70%",
-        end: "top 80%",
+        start: "top 60%",
+        end: "top 70%",
         toggleActions : "play none none reverse"
 
     }
