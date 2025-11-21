@@ -218,30 +218,23 @@ gsap.from(".contact-form",{
 //send Enquiry to my mail
 
 
-function sendMail(e) {
+document.querySelector(".contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
 
-  e.preventDefault()
-  let url ="https://script.google.com/macros/s/AKfycbw1YMX9WJ-hFnx82p-nm8SJAJL1kPq6Xonq-_uCI5dBFsAz0SUsy9WYLRxe9BGQSrc1rw/exec"
+    let params = {
+        name : document.getElementById("name").value,
+        from_email : document.getElementById("email").value,
+        message : document.getElementById("desc").value
+    };
 
-   let obj = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("desc").value
-};
+    emailjs.send("service_mq8045q", "template_4l6lvum", params)
+    .then(function(res){
+        document.getElementById("msg").innerHTML = "Message Sent Successfully!";
+        document.querySelector(".contact-form").reset();
+    })
+    .catch(function(err){
+        document.getElementById("msg").innerHTML = "Failed to send! Try again.";
+        console.error(err);
+    });
+});
 
-let payload = {
-    method: 'POST',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(obj)
-};
-
-fetch(url, payload)
-.then(res => res.json())
-.then(data => {
-    console.log("Success:", data);
-    document.querySelector(".contact-form").reset();
-})
-.catch(err => console.log("Error:", err));
-
-
-}
